@@ -26,7 +26,7 @@ env:
   GAR_LOCATION: us-central1
   GKE_CLUSTER: dev-cluster
   GKE_ZONE: us-central1
-  DEPLOYMENT_NAME: tdd_basics_dev
+  DEPLOYMENT_NAME: tdd-basics-dev
   REPOSITORY: my-docker-repo
   IMAGE: tdd-basics
 

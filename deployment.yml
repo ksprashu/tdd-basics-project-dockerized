@@ -15,12 +15,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gke-test
+  name: tdd-basics-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gke-test
+      app: tdd-basics-dev
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -29,10 +29,10 @@ spec:
   template:
     metadata:
       labels:
-        app: gke-test
+        app: tdd-basics-dev
     spec:
       containers:
-      - name: gke-test
+      - name: tdd-basics-dev
         image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
         ports:
         - containerPort: 5000
