@@ -26,8 +26,8 @@ env:
   SERVICE_NAME: tdd-basics
 
 jobs:
-  setup:
-    name: Setup GCloud Access
+  setup-build-deploy:
+    name: Setup, Build, and Deploy
     runs-on: ubuntu-latest
     environment: production
 
@@ -50,18 +50,10 @@ jobs:
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v0
 
-  build-deploy:
-    needs: setup
-    name: Build and Deploy
-    runs-on: ubuntu-latest
-    environment: production
-
-    steps:
     # Build and push image to Google Container Registry
     - name: Build
       run: |-
         gcloud builds submit \
           --quiet \
           --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
-
 
