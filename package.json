@@ -4,7 +4,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "jest --verbose",
+    "test": "jest --verbose"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
