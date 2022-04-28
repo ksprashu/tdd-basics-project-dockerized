@@ -51,8 +51,8 @@ jobs:
       uses: google-github-actions/setup-gcloud@v0
 
   build-deploy:
-    name: Build and Deploy
     needs: setup
+    name: Build and Deploy
     runs-on: ubuntu-latest
     environment: production
 
