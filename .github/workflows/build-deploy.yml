@@ -23,10 +23,9 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
-  SERVICE_NAME: tdd-basics
   GAR_LOCATION: us-central1
   GKE_CLUSTER: dev-cluster
-  GKE_ZONE: us-central1-c
+  GKE_ZONE: us-central1
   DEPLOYMENT_NAME: tdd_basics_dev
   REPOSITORY: my-docker-repo
   IMAGE: tdd-basics
