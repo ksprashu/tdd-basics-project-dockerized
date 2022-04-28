@@ -32,7 +32,6 @@ describe('My Stack', () => {
     expect(stack.peek).toBe('🥑');
 
     stack.push('🌽');
-    stack.push('🌽');
     expect(stack.top).toBe(1);
     expect(stack.peek).toBe('🌽');
   });
